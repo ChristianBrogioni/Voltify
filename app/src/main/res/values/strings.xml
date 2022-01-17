@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Voltify</string>
+    <string name="editTextTitolo">Titolo</string>
+    <string name="editTextDurata">Durata</string>
+    <string name="editTextAutore">Autore</string>
+    <string name="lblTitolo">Titolo</string>
+    <string name="lblDurata">Durata</string>
+    <string name="lblAutore">Autore</string>
+    <string name="lblGenere">Genere</string>
+
+</resources>

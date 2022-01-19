@@ -1,5 +1,7 @@
 package com.example.voltify;
 
+import android.content.Intent;
+
 import java.util.ArrayList;
 
 public class Gestorebrani {
@@ -16,6 +18,8 @@ public class Gestorebrani {
     }
 
     public void visualizzaBrani(){
+
+
 
     }
 }

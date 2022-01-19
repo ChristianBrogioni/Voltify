@@ -3,6 +3,7 @@ package com.example.voltify;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -25,6 +26,7 @@ String[] elencoGeneri={"Trap","Pop","Hip Hop"};
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        visualizza= (Button) findViewById(R.id.visualizza);
         aggiungi= (Button) findViewById(R.id.aggiungi);
         titolo= (EditText) findViewById(R.id.titolo);
         autore= (EditText) findViewById(R.id.autore);
@@ -41,7 +43,14 @@ String[] elencoGeneri={"Trap","Pop","Hip Hop"};
                 String testo= genere.getSelectedItem().toString();
                 Toast.makeText(getApplicationContext(), testo, Toast.LENGTH_LONG).show();
                 gb.addBrano(titolo.getText().toString(), Integer.getInteger(durata.getText().toString()), autore.getText().toString(), genere.getSelectedItem().toString()); //ottengo il contenuto dell'edit text e lo trasformo in stringa
+            }
+        });
 
+        visualizza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(getApplicationContext(), MainActivity2.class);
+                i.putExtra("autore", autore.getText().toString());
 
             }
         });

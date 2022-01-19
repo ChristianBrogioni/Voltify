@@ -30,6 +30,7 @@
         android:layout_marginBottom="591dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="@string/editTextTitolo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,6 +61,7 @@
         android:layout_marginBottom="439dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="@string/editTextAutore"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,14 +87,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="182dp"
-        android:layout_marginTop="98dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="171dp"
         android:layout_marginBottom="244dp"
         android:text="@string/lblDurata"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/genere" />
 
     <EditText
         android:id="@+id/durata"
@@ -104,6 +106,7 @@
         android:layout_marginBottom="181dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="@string/editTextDurata"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -125,7 +128,7 @@
         app:layout_constraintTop_toBottomOf="@+id/durata" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/visualizza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="58dp"
@@ -149,6 +152,7 @@
         app:layout_constraintBottom_toTopOf="@+id/lblDurata"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblGenere" />
+        app:layout_constraintTop_toBottomOf="@+id/lblGenere"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

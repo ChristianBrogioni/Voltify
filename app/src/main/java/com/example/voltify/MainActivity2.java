@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -19,6 +20,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         i= getIntent();
         listaBrani= (ListView)findViewById(R.id.listaBrani);
-
+        String valorericevuto= i.getStringExtra("autore");
+        Toast.makeText(getApplicationContext(), valorericevuto, Toast.LENGTH_LONG).show();
     }
 }

@@ -41,7 +41,7 @@ String[] elencoGeneri={"Trap","Pop","Hip Hop"};
             @Override
             public void onClick(View v) {
                 String testo= genere.getSelectedItem().toString();
-                Toast.makeText(getApplicationContext(), testo, Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, testo, Toast.LENGTH_LONG).show();
                 gb.addBrano(titolo.getText().toString(), Integer.getInteger(durata.getText().toString()), autore.getText().toString(), genere.getSelectedItem().toString()); //ottengo il contenuto dell'edit text e lo trasformo in stringa
             }
         });
@@ -49,8 +49,9 @@ String[] elencoGeneri={"Trap","Pop","Hip Hop"};
         visualizza.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(getApplicationContext(), MainActivity2.class);
+                Intent i= new Intent(MainActivity.this, MainActivity2.class);
                 i.putExtra("autore", autore.getText().toString());
+                startActivity(i);
 
             }
         });

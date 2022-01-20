@@ -19,7 +19,7 @@ EditText titolo;
 EditText autore;
 EditText durata;
 Gestorebrani gb;
-Spinner genere; //creazione oggetto di tipo spinner
+Spinner genere;
 String[] elencoGeneri={"Trap","Pop","Hip Hop"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {

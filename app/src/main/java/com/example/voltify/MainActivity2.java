@@ -18,9 +18,9 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        i= getIntent();
+        i= getIntent(); //ottengo l'intent che ha avviato la seconda activity
         listaBrani= (TextView) findViewById(R.id.listaBrani);
-        String valorericevuto= i.getStringExtra("brano");
+        String valorericevuto= i.getStringExtra("brano"); //ottengo i dati che ho passato dall'altra activity
         Toast.makeText(getApplicationContext(), valorericevuto, Toast.LENGTH_LONG).show();
     }
 }

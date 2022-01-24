@@ -20,7 +20,7 @@ EditText autore;
 EditText durata;
 Gestorebrani gb;
 Spinner genere;
-String[] elencoGeneri={"Trap","Pop","Hip Hop"};
+String[] elencoGeneri={"Trap","Pop","Hip Hop"}; //array di stringhe contenente i generi musicali
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +37,7 @@ String[] elencoGeneri={"Trap","Pop","Hip Hop"};
         ArrayAdapter<String> spGen= new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, elencoGeneri);//associo lo spinner all'array utilizzando l'array adapter. L'array adapter fa da ponte
         genere.setAdapter(spGen);
 
-        aggiungi.setOnClickListener(new View.OnClickListener() {
+        aggiungi.setOnClickListener(new View.OnClickListener() { //rende cliccabile il primo bottone
             @Override
             public void onClick(View v) {
                 String testo= genere.getSelectedItem().toString();
@@ -46,12 +46,12 @@ String[] elencoGeneri={"Trap","Pop","Hip Hop"};
             }
         });
 
-        visualizza.setOnClickListener(new View.OnClickListener() {
+        visualizza.setOnClickListener(new View.OnClickListener() { //rende cliccabile il secondo bottone
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(MainActivity.this, MainActivity2.class);
-                i.putExtra("brani", gb.visualizzaBrani());
-                startActivity(i);
+                Intent i= new Intent(MainActivity.this, MainActivity2.class); //istanzio l'oggetto di tipo intent passandogli come parametri l'activity in cui mi trovo e l'activity in cui mi voglio spostare
+                i.putExtra("brani", gb.visualizzaBrani()); //trasferisco alla MainActivity2 la stringa che ottengo grazie al metodo visualizzaBrani
+                startActivity(i);//avvio la seconda activity
 
             }
         });

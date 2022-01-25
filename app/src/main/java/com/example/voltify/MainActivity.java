@@ -49,8 +49,9 @@ String[] elencoGeneri={"Trap","Pop","Hip Hop"}; //array di stringhe contenente i
         visualizza.setOnClickListener(new View.OnClickListener() { //rende cliccabile il secondo bottone
             @Override
             public void onClick(View v) {
+                String passa = gb.visualizzaBrani();
                 Intent i= new Intent(MainActivity.this, MainActivity2.class); //istanzio l'oggetto di tipo intent passandogli come parametri l'activity in cui mi trovo e l'activity in cui mi voglio spostare
-                i.putExtra("brani", gb.visualizzaBrani()); //trasferisco alla MainActivity2 la stringa che ottengo grazie al metodo visualizzaBrani
+                i.putExtra("brani", passa); //trasferisco alla MainActivity2 la stringa che ottengo grazie al metodo visualizzaBrani
                 startActivity(i);//avvio la seconda activity
 
             }

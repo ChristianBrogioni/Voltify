@@ -22,7 +22,7 @@ public class Brano {
         return titolo;
     }
 
-    public int getDurata() {
+    public Integer getDurata() {
         return durata;
     }
 

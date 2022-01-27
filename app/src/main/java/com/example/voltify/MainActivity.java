@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.io.Serializable;
+
 public class MainActivity extends AppCompatActivity {
 Button aggiungi;
 Button visualizza;
@@ -42,7 +44,7 @@ String[] elencoGeneri={"Trap","Pop","Hip Hop"}; //array di stringhe contenente i
             public void onClick(View v) {
                 String testo= genere.getSelectedItem().toString();
                 Toast.makeText(MainActivity.this, testo, Toast.LENGTH_LONG).show();
-                gb.addBrano(titolo.getText().toString(), Integer.getInteger(durata.getText().toString()), autore.getText().toString(), testo); //ottengo il contenuto dell'edit text e lo trasformo in stringa
+                gb.addBrano(titolo.getText().toString(), Integer.parseInt(durata.getText().toString()), autore.getText().toString(), testo); //ottengo il contenuto dell'edit text e lo trasformo in stringa
             }
         });
 
